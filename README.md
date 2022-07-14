@@ -4,13 +4,20 @@ Running the following command will give Cloud Build Service Account container.de
 
 ### Prep work
 ```
+
+git clone https://github.com/louayshaat/gcp_cloudbuild
+
+cd gcp_cloudbuild
+
+docker build -t exapp .
+
 gcloud config set project <my-project>
 
 gcloud services enable containerregistry.googleapis.com
 
 gcloud services enable cloudbuild.googleapis.com
 
-gcloud container clusters get-credentials --zone=europe-west4-a <cluster>
+gcloud container clusters get-credentials --zone=us-central1-c devops-demo
 
 PROJECT="$(gcloud projects describe \
     $(gcloud config get-value core/project -q) --format='get(projectNumber)')"
