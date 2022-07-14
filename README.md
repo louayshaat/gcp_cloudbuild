@@ -60,7 +60,7 @@ EOF
 git remote add google ssh://XXXXXX@XXXXX.altostrat.com@source.developers.google.com:2022/p/core-demos/r/mycode-repo
 git add main.go Dockerfile cloudbuild.yaml
 git commit -m "files"
-git push origin remote
+git push --all google
 ```
 
 ### Trigger a manual Cloud Build run
@@ -77,7 +77,7 @@ gcloud beta builds triggers list
 vim main.go
 git add main.go
 git commit main.go -m "update 1"
-git push origin master
+git push --all google
 watch -t -n2 kubectl logs -lrun=exapp
 kubectl get events --sort-by='{.lastTimestamp}' --namespace=default --watch
 ```
