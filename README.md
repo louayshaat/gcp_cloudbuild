@@ -54,10 +54,10 @@ git config user.email louays@google.com
 cat > ~/.ssh/config <<EOF
 Host source.developers.google.com
     HostName source.developers.google.com
-    User louays@google.com
+    User XXXXX@XXXXXX.altostrat.com
     IdentityFile ~/.ssh/myrepokey
 EOF
-git remote add origin ssh://source.developers.google.com:2022/p/core-demos/r/mycode-repo
+git remote add google ssh://XXXXXX@XXXXX.altostrat.com@source.developers.google.com:2022/p/core-demos/r/mycode-repo
 git add main.go Dockerfile cloudbuild.yaml
 git commit "files"
 git push origin master
