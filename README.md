@@ -50,7 +50,7 @@ https://source.cloud.google.com/user/ssh_keys
 ```
 gcloud source repos create mycode-repo
 gcloud source repos describe mycode-repo
-git config user.email louays@google.com
+git config user.email XXXX@XXXXX.com
 cat > ~/.ssh/config <<EOF
 Host source.developers.google.com
     HostName source.developers.google.com
