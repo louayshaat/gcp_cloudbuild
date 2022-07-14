@@ -37,7 +37,7 @@ kubectl logs -lrun=exapp -f
 
 ### Example 2 - Setup CICD - Create a repo, and setup a Cloud Build trigger
 ```
-ssh-keygen -t rsa -b 4096 -C "source repo build <email>" -f ~/.ssh/myrepokey -P ''
+ssh-keygen -t rsa -b 4096 -C "source repo build louays@google.com" -f ~/.ssh/myrepokey -P ''
 cat ~/.ssh/myrepokey.pub
 ```
 ### Upload key to
@@ -50,11 +50,11 @@ https://source.cloud.google.com/user/ssh_keys
 ```
 gcloud source repos create mycode-repo
 gcloud source repos describe mycode-repo
-git config user.email <youraccount>
+git config user.email louays@google.com
 cat > ~/.ssh/config <<EOF
 Host source.developers.google.com
     HostName source.developers.google.com
-    User <youraccount>
+    User core-demos
     IdentityFile ~/.ssh/sourcerepobuild
 EOF
 git remote add origin ssh://source.developers.google.com:2022/p/<project>/r/<yourrepo>
