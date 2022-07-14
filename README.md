@@ -59,8 +59,8 @@ Host source.developers.google.com
 EOF
 git remote add google ssh://XXXXXX@XXXXX.altostrat.com@source.developers.google.com:2022/p/core-demos/r/mycode-repo
 git add main.go Dockerfile cloudbuild.yaml
-git commit "files"
-git push origin master
+git commit -m "files"
+git push origin remote
 ```
 
 ### Trigger a manual Cloud Build run
